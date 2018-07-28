@@ -1,0 +1,117 @@
+
+.main{
+  border:3px solid black;
+  padding: 2%;
+  margin: 2%;
+  display:flex;
+  flex-direction: row;
+  /*height:30%;*/
+}
+h2{
+  color:brown;
+  font-size:20px;
+  text-decoration:underline;
+}
+a{
+  color:green;
+  text-decoration: none;
+  word-wrap: break-word;
+}
+.left{
+  position:relative;
+  color:#eee;
+  background-color: #111;
+  border: 2px solid black;
+  padding:2%;
+  margin:2%;
+  width:30%;
+  /*height:30%;*/
+  text-align: center;
+
+}
+.right{
+  position:relative;
+  border:2px solid green;
+  width:60%;
+  padding:2%;
+  margin:2%;
+
+}
+table{
+  width:50%;
+
+}
+#name,#phno{
+  text-align:center;
+}
+.left img{
+  position:relative;
+  clip: rect(0px,60px,200px,0px);
+  width:60%;
+  display:block;
+  margin-top: 5%;
+  margin-left:auto;
+  margin-right:auto;
+  border-radius: 20%
+  border:3px dashed orange;
+  /*float:center;*/
+}
+@media only screen and (min-width:320px) and (max-width:480px){
+
+
+/*-------copying starts here---------*/
+.main{
+  border:3px solid black;
+  padding: 2%;
+  margin: 2%;
+  display:flex;
+  flex-direction: column;
+  /*height:30%;*/
+}
+h2{
+  color:brown;
+  font-size:20px;
+  text-decoration:underline;
+}
+a{
+  color:green;
+  text-decoration: none;
+  word-wrap: break-word;
+}
+.left{
+  position:relative;
+  color:#eee;
+  background-color: #111;
+  border: 2px solid black;
+  padding:2%;
+  margin:2%;
+
+  width:80%;
+  /*height:30%;*/
+  text-align: center;
+
+}
+.right{
+  position:relative;
+  border:2px solid green;
+  width:90%;
+  padding:2%;
+  margin:2%;
+
+}
+#name,#phno{
+  text-align:center;
+}
+.left img{
+  width:60%;
+  display:block;
+  margin-top: 5%;
+  margin-left:auto;
+  margin-right:auto;
+
+  border:3px dashed brown;
+  float:center;
+}
+/*--------copy ended here--------*/
+
+}

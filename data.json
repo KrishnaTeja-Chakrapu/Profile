@@ -1,0 +1,56 @@
+{
+	"details": {
+		"image": "profile.png",
+		"name": "krishna",
+		"phno": "+91 9848233454",
+		"email": "chakrapukrishnateja@gmail.com",
+		"address": "Mic college, Kanchikacherla."
+	},
+	"info": {
+		"head": "Career Objective",
+		"para": "To work hard with full dedication for the achievement of organization objective under satisfying job contact,hence enhancing my skill and knowledge and ready to learn new things"
+	},
+	"education":[
+		  {
+	      "qualification":"Btech",
+			   "institute":"Mic college",
+			   "year":"2016-2020",
+			   "percentage":"90%"
+	    },
+			{
+			"qualification":"Intermediate",
+			 "institute":"Chaitanya",
+			 "year":"2014-2016",
+			 "percentage":"91%"
+		 },
+    	{
+	   	"qualification":"ssc",
+		   "institute":"Gowtham",
+		   "year":"2010-2014",
+		   "percentage":"90%"
+      }
+   ],
+	 "skills":[
+		   {
+		   "title":"Programming Languages",
+			 "info":["C,C++,Java,R,Python"]
+		   },
+			 {
+				"title":"Databases",
+				"info":["Oracle,SQL,mysql,Tinydb"]
+			},
+			{
+			 "title":"Operating Systems",
+			 "info":["Oracle,SQL,mysql,Tinydb"]
+		 }
+
+	 ],
+
+	 "achievements":[
+		    {
+					"title":"prizes",
+					"info":["i won the race national level"]
+				}
+	 ]
+
+}
