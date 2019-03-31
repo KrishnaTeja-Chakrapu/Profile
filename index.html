@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MyCollege</title>
+        <meta lang="en-US">
+        <meta charset="UTF-8">
+       <meta http-equiv="refresh" content="30">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<!--css sheet starts here..--->
+<style>
+
+   body{
+    margin:0px;
+    padding:0px;
+   // color:darkgrey;
+   background-color:#eee;
+-webkit-z-index:1;
+z-index:1;
+   }
+
+.container{
+   max-width:960px;
+   width:96%;
+   margin:auto;
+z-index:1;
+}
+
+  nav{
+     list-style-type:none;
+     float:right;
+     line-height:60px;
+    
+  }
+nav li{
+   // width:40px;
+   position: relative;
+   bottom:8px;
+    float:left;
+border-right:2px solid white;
+   height:28px;
+//margin-bottom:10px;
+    padding:5px;
+   // padding-bottom:10px;
+     line-height:5px;
+     font-style:bold;
+     font-size:20px;
+    border:2px solid black;
+  //  background-color:red;
+}
+.active{   
+font-weight:bold;
+text-decoration:overline;
+  }
+nav li a{
+//display:block;
+//width:50px;
+//height:90px;
+//border-right:2px solid white;
+padding:0px 5px;
+//padding-bottom:10px;
+text-decoration:none;
+//margin-top:4px;
+//display:block;
+  //line-height:2px;
+color:white;
+//margin-bottom:20px;
+//border:2px solid blue;
+font-weight:bold;
+     font-size:30px;
+   }
+
+
+header{
+margin-top:5px;
+ //max-width:960px;
+ width:100%;
+ // height:55px;
+// min-width:600px;
+margin-bottom:20px;
+//position:fixed;
+  // background-color: rgb(100,100,200);
+  background-color: hsl(270,100%,60%);
+
+color:#fff;
+overflow:hidden;
+}
+ #logo{
+    float:left;
+  //  margin:-2px 3px;
+margin-left:-5px;
+margin-top:2px;
+
+}
+
+/* ************************
+.content article{
+ // max-width:600px;
+   width:600px;
+ 
+   float:left;
+  color:#fff;
+margin:auto;
+  background-color: #000;
+opacity:0.6;
+  // font-family:ariel;
+  padding:4px 4px;
+  border:3px solid white;
+ //  border-shadow: 6px 6px 6px black;
+   border-radius: 5px;
+}
+****************  */
+.wrapper{
+//background-color:white;
+background: -webkit-linear-gradient(left,hsl(270,100%,80%),white); 
+background: linear-gradient(left,hsl(270,100%,80%), white); 
+//opacity:0.5;
+margin:0px auto;
+color:white;
+
+  }
+.container{  
+//background-color:green;
+
+ }
+.container::after{ 
+content:" ";
+display:block;
+clear:both;
+}
+.content-right{  
+padding:5px 5px;
+float:right;
+width:24%;
+margin-top:10px;
+margin:auto;
+background-color:black;
+opacity:0.7;
+ }
+.content-left{  
+padding:5px 5px;
+float:left;
+border:2px solid black;
+border-radius:5px;
+box-shadow:7px 7px 7px black;
+width:71%;
+background-color:black;
+//background: -webkit-linear-gradient(red, yellow); 
+//background: linear-gradient(red, yellow); 
+opacity:0.79;
+margin:5px;
+ }
+.wrapper::after{  
+content:" ";
+display:block;
+clear:both;
+  }
+.main-title{  
+    width:500px;
+height:50px;
+//padding:5px;
+//margin:-5px;
+position:absolute;
+left:30%;
+top:-10px;
+//background-color:red;
+float:center;
+text-align:center;
+//line-height:100px;
+    //font-size:10px;
+
+ }
+h1.main-tit{ 
+    font-size:25px;
+font-family:sans-serif;
+letter-spacing:10px;
+text-shadow:5px 5px 1px black;
+  }
+
+.drop-container{   
+    width:100%;
+height:70px;
+    background-color:black;
+margin-bottom:10px;
+z-index:5;
+ }
+
+.content-head{ 
+    text-align:center;
+  }
+
+.content-body{  
+padding:2px 6px;
+border:2px solid black;
+  border-radius:5px;
+    }
+
+/* *****
+footer{   
+  max-width:960px;
+   width:96%;
+   height:60px;
+   margin:auto;
+  margin-left:1.5%;
+float:bottom;
+        position:absolute;
+       bottom:1%;
+    border:3px solid black;
+background-color: rgb(100,100,200);
+
+}
+******** */
+.btn{ display:none; }
+
+.menu h3{   visibility:hidden;}
+
+footer {   margin:5px auto;
+color:white;
+background-color:black;
+border:3px solid black;
+opacity:0.7;
+border-radius:5px;
+height:70px; }
+footer p{   
+
+Text-align:center;
+font-family:serif;
+font-weight:bold;
+color:white;
+padding:4px;
+ }
+
+/*----media queries---*/
+@media screen and ( max-width:480px) , ( max-width:600px) {
+
+    nav{  
+display:none;
+  }
+
+.menu h3{   visibility:visible;}
+
+
+.main-title{  
+    width:170px;
+height:20px;
+padding:-5px;
+margin:-5px;
+position:absolute;
+left:48%;
+top:5px;
+//background-color:red;
+float:center;
+
+text-align:center;
+//line-height:100px;
+    //font-size:10px;
+
+ }
+h1.main-tit{ 
+    font-size:16px;
+font-family:sans-serif;
+letter-spacing:3px;
+  }
+
+.dropdown, .btn{ display:block;
+//position:relative;
+ }
+button.btn{
+    width:60px;
+    height:58px;
+    border: 1px solid grey;
+   border-radius:30px;
+   float:right;
+background-color:black;
+    opacity:0.8;
+   // margin:-4px;
+    // padding:5px;
+    text-align:center;
+   float:right;
+ //position:absolute;
+  //top:115px;
+  // left:78%;
+
+}
+span{  //font-weight:bold;
+color:white;
+          font-size:35px;
+}
+
+nav li {
+text-align:center;
+float:center;
+margin-left:12%;
+letter-spacing:3px;
+width:250px;
+//text-indent:10px;
+//word-break:break-all;
+//  line-spacing:-5px;
+//background-color:red;
+//word-wrap:nowrap;
+//word-spacing:-5px;
+
+}
+nav li a{  
+      font-size:18px;
+  }
+.dropdown:hover nav {
+   position:absolute;
+   top:34%;
+    right:2%;
+    display:block;
+   width:95%;
+   height:50%;
+text-align:center;
+   //word-wrap: ;
+   background-color: black;
+  opacity:0.8;
+-webkit-z-index:10;
+z-index:10;
+}
+
+.drop-container{  
+    background-color:black;
+//    height:auto;
+     width:100%;
+
+  }
+
+
+.menu h3{
+  color:white;
+ position:relative;
+width:120px;
+
+display:inline-block;
+margin-top:13px;
+  float:left;
+margin-left:35%;
+  font-size:30px;
+letter-spacing:15px;
+// background-color:pink;
+z-index:10;
+}
+
+.content{ 
+  // margin-bottom:10%;
+
+  } 
+/* *******************
+.content article{
+ // max-width:600px;
+   width:96%;
+margin-bottom:20%;
+margin:auto;
+  padding:4px 4px;
+  border:3px solid white;
+ //  border-shadow: 6px 6px 6px black;
+   border-radius: 5px;
+}
+************* */
+
+.content-left{  
+
+width:95.5%;
+box-shadow:5px 7px 5px black;
+margin:5px auto;
+ }
+
+
+.content-right{
+
+   width:96%;
+
+    }
+
+
+footer{  
+  // bottom:-1%;
+ }
+
+}
+@media screen and ( max-width:700px ) and (min-width:500px) {
+ /* *{
+display:none;
+}*/
+
+.dropdown:hover nav {
+top:65%;
+height:150px;
+}
+nav li{   
+      margin-left:20%;
+  }
+
+}
+</style>
+<!--css sheet ends here..--->
+
+    </head>
+
+    <body>
+<div class="wrapper">
+
+       <header>
+          <div class="container">
+
+               <div id="logo"> <img src="mic.jpg" width="150" height="70" /></div>
+
+      <div class="main-title">
+         <h1 class="main-tit"> Indian Institute of technology</h2></div>
+              
+        </div>
+      </header>
+
+  <div class="container">
+    <div class="drop-container">
+   <div class="menu"> <h3> Menu</h3> </div>
+     <div class="dropdown">
+                 <button class="btn"><span>=</span></button>
+         <nav>
+                <div class="btn-content">
+                 <li><a href="#" class="active">Home</a></li>
+                 <li> <a href="#"> About College</a></li>
+                 <li> <a href="#"> something</a></li>
+                 <li> <a href="#"> something</a></li>
+              </div>
+             </nav>
+       </div>
+  </div>
+</div>
+
+
+         <div class="container">
+<div class="content-right">
+<div class="content-head">
+<h3> Sidebar-1</h3>
+</div>
+<div class="content-body">
+      <li>this is slide  bar ddd</li>
+      <li>this is slide  shhdgg</li>
+     <li>this is slide  shhdggs</li>
+     <li>this is slide  shhdgg</li>
+      <li>this is slide  shhdgg</li>
+     <li>this is slide  shhdgg</li>
+      <li>this is slide  shhdgg</li>
+     <li>this is slide  shhdggs</li>
+     <li>this is slide  shhdgg</li>
+      <li>this is slide  shhdgg</li>
+     <li>this is slide  shhdggs</li>
+      <li>this is slide  shhdgg</li>
+      <li>this is slide  shhdgg</li>
+     <li>this is slide  shhdggs</li>
+      <li>this is slide  shhdgg</li>
+      <li>this is slide  shhdgg</li>
+   
+<h3> Sidebar-2</h3>
+</div>
+<div class="content-body">
+      <li>this is slide  bar gg</li>
+      <li>this is slide  shhdgg</li>
+     <li>this is slide  shhdggs</li>
+     <li>this is slide  shhdgg</li>
+      <li>this is slide  shhdgg</li>
+     <li>this is slide  shhdgg</li>
+      <li>this is slide  shhdgg</li>
+     <li>this is slide  shhdggs</li>
+     <li>this is slide  shhdgg</li>
+      <li>this is slide  shhdgg</li>
+     <li>this is slide  shhdggs</li>
+      <li>this is slide  shhdgg</li>
+      <li>this is slide  shhdgg</li>
+     <li>this is slide  shhdggs</li>
+      <li>this is slide  shhdgg</li>
+      <li>this is slide  shhdgg</li>
+   </div> 
+   </div>
+
+       <div class="content-left">
+        <div class="content-head">
+          <h3> section-1</h3>
+        </div>
+       <div class="content-body">
+  <p>This is a paragraph  This is a paragraph This is a paragraph  This is a paragraph This is a paragraph This is a paragraph This is a paragraph This is a paragraph  This is a paragraph This is a paragraph  This is a paragraph This is a paragraph This is a paragraph This is a paragraph This is a paragraph  This is a paragraph This is a paragraph  This is a paragraph This is a paragraph This is a paragraph This is a paragraph This is a paragraph  This is a paragraph This is a paragraph  This is a paragraph This is a paragraph This is a paragraph This is a paragraph  </p>
+            </div>
+    </div>
+<div class="content-left">
+   <div class="content-head">
+<h3> Section-2 </h3>
+</div>
+  <div class="content-body">
+             <p>This is a paragraph  This is a paragraph This is a paragraph  This is a paragraph This is a paragraph This is a paragraph This is a paragraph This is a paragraph  This is a paragraph This is a paragraph  This is a paragraph This is a paragraph This is a paragraph This is a paragraph This is a paragraph  This is a paragraph This is a paragraph  This is a paragraph This is a paragraph This is a paragraph This is a paragraph This is a paragraph  This is a paragraph This is a paragraph  This is a paragraph This is a paragraph This is a paragraph This is a paragraph  </p>
+            </div> 
+  </div>
+</div>
+<div class="container">
+<footer>
+          <p>This is footer &copy; 2019.. blah.. blah... blah...</p>
+       </footer></div>
+</div>
+    </body>
+
+</html>
